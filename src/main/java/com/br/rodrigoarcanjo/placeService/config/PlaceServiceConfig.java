@@ -8,12 +8,10 @@ import com.br.rodrigoarcanjo.placeService.domain.PlaceRepository;
 import com.br.rodrigoarcanjo.placeService.domain.PlaceService;
 
 @Configuration
-@EnableR2dbcAuditing
-public class PlaceConfig {
-
-    @Bean
-    PlaceService placeService(PlaceRepository placeRepository) {
-        return new PlaceService(placeRepository);
-    }
-    
+@EnableR2dbcAuditing // Para preencher o createdAt e updatedAt
+public class PlaceServiceConfig {
+  @Bean
+  PlaceService placeService(PlaceRepository placeRepository) {
+    return new PlaceService(placeRepository);
+  }
 }
