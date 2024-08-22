@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS place (
-id BIGINT AUTO_INCREMENT PRIMARY KEY,
-NAME VARCHAR(255) NOT NULL,
-slug VARCHAR(255) NOT NULL,
-STATE VARCHAR(255) NOT NULL,
-created_at TIMESTAMP NOT NULL,
-updated_at TIMESTAMP NOT NULL
+  id bigint AUTO_INCREMENT primary key,
+  name varchar(255) not null,
+  slug varchar(255) not null,
+  city varchar(255) not null,
+  state varchar(255) not null,
+  created_at timestamp not null,
+  updated_at timestamp not null
 );
